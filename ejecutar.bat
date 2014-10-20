@@ -1,0 +1,1 @@
+c:\python27\python C:\Google\google_appengine\dev_appserver.py modulo1\app.yaml modulo2\app.yaml

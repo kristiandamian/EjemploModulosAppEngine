@@ -1,0 +1,14 @@
+application: myapp-name
+
+dispatch: 
+# enviar todo el trafico al modulo login
+- url: '*/login/*'
+  module: default
+
+
+# enviar todo el trafico al modulo mobile
+- url: "mobile.mydominio.com/*"
+  module: mobile
+  
+- url: "*/mobile/*"
+  module: mobile

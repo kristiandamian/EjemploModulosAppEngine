@@ -1,0 +1,31 @@
+application: myapp-name #mismo en todos los modulos y el archivo dispatch
+version: 1
+module: default #El modulo por default (tiene que existir uno a fuerzas)
+runtime: python27
+api_version: 1
+threadsafe: true
+
+
+instance_class: F1  #puede ser un tipo diferente
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+  
+handlers:
+- url: /images
+  static_dir: images
+- url: /js
+  static_dir: javascripts  
+- url: /css
+  static_dir: stylesheets  
+- url: /fonts
+  static_dir: fonts  
+- url: /assets
+  static_dir: assets  
+ 
+  
+- url: /.*
+  script: login.application
